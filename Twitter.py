@@ -82,8 +82,8 @@ class TwitterTool(Tool):
                 except Exception as e:
                     print_error(" " + str(e), True)
 
+                tweets = []
                 if len(self.__messages) > 0:
-                    tweets = []
                     for message in self.__messages:
                         tweet = TwitterMessage(
                             tweet_id=message.id,
