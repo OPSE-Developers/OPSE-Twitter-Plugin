@@ -32,7 +32,7 @@ class TwitterTool(Tool):
         self.__twint_config.Store_object_tweets_list = self.__messages
         self.__twint_config.Store_object_users_list = self.__users
         self.__twint_config.Store_object = True
-        self.__twint_config.Limit = Config.get().get('config', {}).get('tools', {}).get('twittertool', {}).get('tweet_limit', 0)
+        self.__twint_config.Limit = self._tool_config.get('tweet_limit', 0)
         self.__twint_config.Hide_output = True
 
     @staticmethod
